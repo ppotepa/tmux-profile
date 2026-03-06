@@ -1,32 +1,46 @@
-# Tmux WASD Profile
+# Tmux WASD - Twój Terminal jak Gra FPS 🎮
 
-An "Ultimate WASD One-Hand Profile" for tmux, optimized for left-hand efficiency and a "gamer" aesthetic.
+To jest konfiguracja Tmuxa stworzona dla osób, które chcą obsługiwać terminal głównie lewą ręką (jak w grach) i mieć dostęp do potężnych funkcji jednym kliknięciem.
 
-## Key Features
+## 🚀 Szybki start
 
-- **Prefix:** `Ctrl-a` (rebound from `Ctrl-b`).
-- **WASD Navigation:** Move between panes using `Prefix + W/A/S/D` or `Alt + W/A/S/D`.
-- **Sprint Resize:** Resize panes with `Prefix + Shift + W/A/S/D`.
-- **RTS-style Control Groups:** Quick window switching using `Alt + 1-6` or `Prefix + 1-6`.
-- **Focus Mode:** `Prefix + Z` to zoom a pane and hide the status bar (Sniper Mode).
-- **Session Persistence:** Integrated with `tmux-resurrect` and `tmux-continuum`.
+1. Skopiuj plik do swojego folderu domowego: `cp .tmux-wsad.conf ~/.tmux.conf`
+2. **Instalacja dodatków (Ważne!):** Będąc w Tmuxie, naciśnij `Ctrl + a`, a potem dużą literę `I` (jak Install). Cierpliwie poczekaj chwilę.
+3. Odświeżanie ustawień: `Ctrl + a`, potem `r`.
 
-## Installation
+---
 
-1. Clone this config:
-   ```bash
-   cp .tmux-wsad.conf ~/.tmux.conf
-   ```
-2. Install [Tmux Plugin Manager (TPM)](https://github.com/tmux-plugins/tpm):
-   ```bash
-   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-   ```
-3. Load the config in tmux and press `Prefix + I` to install plugins.
+## 🕹️ Sterowanie WASD (Poruszanie się)
 
-## Layout Shortcuts
+Używasz `Ctrl + a` (twój "Prefix"), a potem:
+- **W / A / S / D**: Przechodzenie między okienkami (góra, lewo, dół, prawo).
+- **Q / E**: Dzielenie ekranu (Q = pionowo, E = poziomo).
+- **Shift + W / A / S / D**: Szybka zmiana rozmiaru okienka ("sprint").
+- **Z**: Tryb snajperski (powiększa jedno okno na cały ekran i chowa paski).
 
-- `q` / `e`: Split window (Vertical/Horizontal)
-- `t`: Rename window (Type/Talk)
-- `f`: Choose session (Full Map)
-- `v`: Copy mode
-- `` ` ``: Toggle status bar (HUD)
+Możesz też używać samego `Alt + WASD` bez naciskania `Ctrl + a`.
+
+---
+
+## 🔥 Nowe "Supermoce" (Pluginy)
+
+Dodałem dla Ciebie kilka fajnych bajerów:
+
+1.  **Pływająca Konsola (Pop-up):**
+    - Naciśnij `Ctrl + a` i `p`. Pojawi się okienko na środku ekranu. Idealne, żeby coś szybko sprawdzić i zamknąć (ponownie `Ctrl + a` i `p`).
+2.  **Łatwe Kopiowanie (Yank):**
+    - W trybie kopiowania (`Ctrl + a` + `v`), zaznacz tekst i naciśnij `y`. Tekst od razu trafia do Twojego Windowsa/Maca (schowka systemowego).
+3.  **Magiczne Wyciąganie Tekstu (Extrakto):**
+    - Naciśnij `Ctrl + a` + `g`. Tmux pokaże Ci listę ścieżek i linków, które są na ekranie. Wybierz jeden, a on sam się wpisze!
+4.  **Zapisywanie Sesji:**
+    - Twoja praca nie zginie po restarcie komputera.
+    - `Ctrl + a` + `Ctrl + s` (Save) – zapisz.
+    - `Ctrl + a` + `Ctrl + r` (Restore) – przywróć wszystko.
+
+---
+
+## 🛠️ Inne przydatne klawisze
+- `` ` `` (klawisz tyldy pod Esc): Pokazuje/chowa dolny pasek (HUD).
+- `t`: Zmiana nazwy okna (Talk).
+- `f`: Lista wszystkich sesji (Full Map).
+- `F6`: Odłączenie się od sesji (wyjście do zwykłego terminala).

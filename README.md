@@ -49,6 +49,26 @@ Provides a centered floating terminal popup (`Prefix + p` or `Alt + p`).
 - `Prefix + f`: Launch session tree/chooser.
 - `Prefix + Tab`: Toggle between the two most recent windows.
 
+## Shell Prompt (Bash + Fish)
+
+If you also want a git-aware shell prompt (branch + dirty/clean state + user/host + time), this repo includes ready-to-source configs:
+
+- Bash: `shell/bash/git-aware-prompt.sh`
+- Fish: `shell/fish/git-aware-prompt.fish`
+
+Quick install:
+
+```bash
+# Bash
+echo 'source /home/ppotepa/git/tmux-profile/shell/bash/git-aware-prompt.sh' >> ~/.bashrc
+
+# Fish
+mkdir -p ~/.config/fish/conf.d
+cp /home/ppotepa/git/tmux-profile/shell/fish/git-aware-prompt.fish ~/.config/fish/conf.d/git-aware-prompt.fish
+```
+
+Reload shell (`exec bash` / restart fish) and the prompt will show git context when inside a repo.
+
 ### Key Bindings
 
 This section details all the key bindings available in this tmux profile, categorized for easy reference. The default prefix is `C-a`.

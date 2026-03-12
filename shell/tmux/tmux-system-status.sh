@@ -39,7 +39,7 @@ cpu_segment() {
     color="colour82"
   fi
 
-  printf "#[fg=%s]%s%%#[default]" "$color" "$usage"
+  printf "#[fg=%s]C%s%%#[default]" "$color" "$usage"
 }
 
 ram_segment() {
@@ -66,7 +66,7 @@ ram_segment() {
   used_gb="$(awk -v v="$used" 'BEGIN{printf "%.1f", v/1024/1024}')"
   total_gb="$(awk -v v="$mem_total" 'BEGIN{printf "%.1f", v/1024/1024}')"
 
-  printf "#[fg=%s][%s/%sG]#[default]" "$color" "$used_gb" "$total_gb"
+  printf "#[fg=%s]R[%s/%sG]#[default]" "$color" "$used_gb" "$total_gb"
 }
 
 battery_segment() {
@@ -141,7 +141,7 @@ temp_segment() {
     color="colour82"
   fi
 
-  printf "#[fg=%s]%sC#[default]" "$color" "$t"
+  printf "#[fg=%s]T%sC#[default]" "$color" "$t"
 }
 
 last_commit_segment() {
@@ -178,7 +178,7 @@ last_commit_segment() {
     color="colour82"
   fi
 
-  printf "#[fg=%s]%s%s#[default]" "$color" "$value" "$unit"
+  printf "#[fg=%s]G%s%s#[default]" "$color" "$value" "$unit"
 }
 
 parts=()
